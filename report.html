@@ -18061,13 +18061,10 @@ Once you have performed this implementation, the dataset will be stored in the v
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li>128, 154, 65, 66, 75 are considered outliers for more than one feature.</li>
-<li>I remove 128, 154, 65, 66, 75 because these data points are considered outliers for more than one feature.</li>
-<li>For outliers for 'Fresh': I remove 338, because the data is too small.</li>
-<li>For outliers for 'Milk': I remove 86, because the data is too large.</li>
-<li>For outliers for 'Frozen': I remove 145, because the data is too large.</li>
-<li>For outliers for 'Detergents_Paper': I remove 75, because the data is too small.</li>
-<li>For outliers for 'Delicatessen': I remove 183, because the data is too large.</li>
+<li><p>128, 154, 65, 66, 75 are considered outliers for more than one feature.</p>
+</li>
+<li><p>There are a total of 48 outliers at all featured. But there are five outliers (128, 154, 65, 66, 75) more than one feature. Having multiple outlier will greatly affect the data. So I will remove five outliers (128, 154, 65, 66, 75) this. The remaining 42 outliers may be considered deleted.</p>
+</li>
 </ul>
 
 </div>
@@ -18482,14 +18479,16 @@ NKsAAAAASUVORK5CYII=
 <p><strong>Answer:</strong></p>
 <ul>
 <li>0.7068 variance in the data is explained in total by the first and second principal components.</li>
-<li><p>0.931 variance in the data is explained in total by the first and four principal components.</p>
-</li>
-<li><ul>
-<li>The first dimension shows high positive weights on Detergents_paper, Milk, and Grocery. It could represent a retail customer behavior. </li>
-<li>The second dimension shows high positive weights on Fresh, Delicatessen and Frozen. It can represent the behavior of customers distributing frozen goods.</li>
-<li>The third dimension shows high positive weights on Fresh, Delicatessen, Frozen and Detergent Paper. It could represent a retail customer behavior.</li>
-<li>The fourth dimension shows high positive weights on Frozen, Delicatessen and Fresh / Detergent Papers. It can represent the behavior of market customers.</li>
+<li>0.931 variance in the data is explained in total by the first and four principal components.</li>
 </ul>
+<ul>
+<li><p>The first principal component is strongly correlated with Detergents Paper, the first principal component decrease with decrease Detergents Paper, and this principal components is primarily a measure of the spending of Detergents Paper, it would follow that customers with high volum spending tend to spend less on Detergents Paper.</p>
+</li>
+<li><p>The second principal component increases with increasing Fresh, Delicatessen and Frozen, this suggests that these three features vary together, if one decrease, then the remaining two also decrease. This component can be viewed as a measure of the spending of Fresh, Delicatessen and Frozen.</p>
+</li>
+<li><p>The third principal component is strongly correlated with Delicatessen and Fresh, this principal component increases with increasing Delicatessen and decreasing Fresh.</p>
+</li>
+<li><p>The fourth principal component is stongly correlated with Frozen and Delicatessen, the fourth principal component increases with increasing Frozen and decreasing Delicatessen. This component can be viewed as a measure of spending on Frozen and lacking of spending on Delicatessen. This suggests that the customers those spend more on Frozen tend to spend less on Delicatessen.</p>
 </li>
 </ul>
 
